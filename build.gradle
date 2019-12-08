@@ -86,7 +86,7 @@ bootRun {
 
 webdriverBinaries {
     //saved this version locally as 2.45.0 cant be downloaded from site any longer
-    chromedriver '78.0.3904.105'  //'2.45.0'
+    chromedriver '78.0.3904.105'  //'2.45.0  as delivered as by create-app fails as well 
     geckodriver '0.24.0'
 }
 
