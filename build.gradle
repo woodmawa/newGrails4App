@@ -93,6 +93,7 @@ webdriverBinaries {
 tasks.withType(Test) {
     systemProperty "geb.env", System.getProperty('geb.env')
     systemProperty "geb.build.reportsDir", reporting.file("geb/integrationTest")
+    //
     //have this set to D:\dev-binaries\chromedriver - where i downloaded the chrome 78.0.3904.104 chromedriver.exe
     //from https://chromedriver.storage.googleapis.com/index.html?path=78.0.3904.105/
     systemProperty "webdriver.chrome.driver", System.getProperty('webdriver.chrome.driver')
