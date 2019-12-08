@@ -85,13 +85,15 @@ bootRun {
 }
 
 webdriverBinaries {
-    chromedriver '2.45.0'
+    //saved this version locally as 2.45.0 cant be downloaded from site any longer
+    chromedriver '78.0.3904.105'  //'2.45.0'
     geckodriver '0.24.0'
 }
 
 tasks.withType(Test) {
     systemProperty "geb.env", System.getProperty('geb.env')
     systemProperty "geb.build.reportsDir", reporting.file("geb/integrationTest")
+    //have this set to D:\dev-binaries\chromedriver - where i downloaded the chrome 78.0.3904.104 chromedriver.exe
     systemProperty "webdriver.chrome.driver", System.getProperty('webdriver.chrome.driver')
     systemProperty "webdriver.gecko.driver", System.getProperty('webdriver.gecko.driver')
 }
