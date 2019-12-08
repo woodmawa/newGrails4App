@@ -93,9 +93,10 @@ webdriverBinaries {
 tasks.withType(Test) {
     systemProperty "geb.env", System.getProperty('geb.env')
     systemProperty "geb.build.reportsDir", reporting.file("geb/integrationTest")
-    //
+    //gradle builds on `task ':configureChromeDriverBinary'
     //have this set to D:\dev-binaries\chromedriver - where i downloaded the chrome 78.0.3904.104 chromedriver.exe
     //from https://chromedriver.storage.googleapis.com/index.html?path=78.0.3904.105/
+    // running 'gradle build' fails with Execution failed for task ':configureChromeDriverBinary'.  com.github.erdi.gradle.webdriver.repository.DriverUrlNotFoundException: Driver url not found for name: "chromedriver", version: "78.0.3904.105", platform: "windows", bit: "64"
     systemProperty "webdriver.chrome.driver", System.getProperty('webdriver.chrome.driver')
     systemProperty "webdriver.gecko.driver", System.getProperty('webdriver.gecko.driver')
 }
